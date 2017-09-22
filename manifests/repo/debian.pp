@@ -25,9 +25,9 @@ class php::repo::debian(
   $release      = $::lsbdistcodename,
   $repos        = 'main',
   $include_src  = false,
-  $key        => {
-    'id'     => 'DF3D585DB8F0EB658690A554AC0E47584A7A714D',
-    'source' => 'https://packages.sury.org/php/apt.gpg',
+  $key        = {
+    'id'     = 'DF3D585DB8F0EB658690A554AC0E47584A7A714D',
+    'source' = 'https://packages.sury.org/php/apt.gpg',
   },
   $dotdeb = false
 ) {

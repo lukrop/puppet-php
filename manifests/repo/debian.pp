@@ -21,15 +21,15 @@
 #   Enable special dotdeb handling
 #
 class php::repo::debian(
-  $location     = 'http://packages.dotdeb.org',
-  $release      = 'wheezy-php56',
-  $repos        = 'all',
+  $location     = 'https://packages.sury.org/php/',
+  $release      = $::lsbdistcodename,
+  $repos        = 'main',
   $include_src  = false,
-  $key          = {
-    'id'     => '6572BBEF1B5FF28B28B706837E3F070089DF5277',
-    'source' => 'http://www.dotdeb.org/dotdeb.gpg',
+  key        => {
+    'id'     => 'DF3D585DB8F0EB658690A554AC0E47584A7A714D',
+    'source' => 'https://packages.sury.org/php/apt.gpg',
   },
-  $dotdeb       = true,
+  $dotdeb = false,
 ) {
 
   if $caller_module_name != $module_name {

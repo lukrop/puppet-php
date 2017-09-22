@@ -25,11 +25,11 @@ class php::repo::debian(
   $release      = $::lsbdistcodename,
   $repos        = 'main',
   $include_src  = false,
-  key        => {
+  $key        => {
     'id'     => 'DF3D585DB8F0EB658690A554AC0E47584A7A714D',
     'source' => 'https://packages.sury.org/php/apt.gpg',
   },
-  $dotdeb = false,
+  $dotdeb = false
 ) {
 
   if $caller_module_name != $module_name {
